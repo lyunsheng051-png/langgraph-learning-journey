@@ -1,0 +1,17 @@
+[project]
+name = "langgraph-journey-ch03"
+version = "0.1.0"
+description = "LangGraph 学习之路第 3 篇：条件路由与 TXT、DOCX、PDF 文本提取"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = ["langgraph==1.2.16", "python-docx>=1.2,<2", "pypdf>=6,<7"]
+
+[dependency-groups]
+fixtures = ["reportlab>=4,<5"]
+
+[build-system]
+requires = ["hatchling>=1.27,<2.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/chapter_demo"]

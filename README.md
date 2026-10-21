@@ -7,7 +7,7 @@
 
 面向具备 Python 基础的读者，通过同一个「文档资料助手」学习 LangGraph，从节点和状态开始，逐步理解一个 AI 工作流怎样执行。
 
-前两篇从普通 Python 函数、图和状态更新入手，不需要模型密钥。
+前三篇从普通 Python 函数、状态更新和条件路由入手，不需要模型密钥。
 
 从仓库根目录运行第 1 篇：
 
@@ -34,6 +34,7 @@ uv run --locked python -m chapter_demo
 | --- | --- | --- |
 | 01 | 我学 LangGraph 的第一步：把三个函数连成工作流 | [运行指南](chapters/ch01_first_graph/README.md) |
 | 02 | LangGraph 学习之路：理解 State 与 Reducer | [运行指南](chapters/ch02_state_reducers/README.md) |
+| 03 | LangGraph 学习之路：用条件边选择下一步 | [运行指南](chapters/ch03_conditional_routing/README.md) |
 
 各章节独立维护环境和锁文件，进入对应目录运行，不需要安装其他章节。
 

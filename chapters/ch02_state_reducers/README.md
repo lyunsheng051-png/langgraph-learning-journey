@@ -85,6 +85,7 @@ uv run --locked python -m unittest discover -s tests -v
 ```
 
 - [第 1 篇运行指南](../ch01_first_graph/README.md)
+- [第 3 篇：用条件边选择下一步](../ch03_conditional_routing/README.md)
 - [仓库首页](../../README.md)
 - [兼容记录](../../docs/compatibility.md)
 - [常见问题](../../docs/troubleshooting.md)
