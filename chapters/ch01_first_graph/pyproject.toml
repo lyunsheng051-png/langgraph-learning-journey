@@ -1,0 +1,16 @@
+[project]
+name = "langgraph-journey-ch01"
+version = "0.1.0"
+description = "LangGraph 学习之路第 1 篇：无模型的 TXT 文档统计工作流"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "langgraph>=1.0,<2.0",
+]
+
+[build-system]
+requires = ["hatchling>=1.27,<2.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/chapter_demo"]
