@@ -88,5 +88,6 @@ TypedDict 用于描述字典字段，不会自动读取文件、填充默认值�
 具体依赖、验证时间和运行结果见[兼容记录](../../docs/compatibility.md)。本章依赖范围由 pyproject 声明，实际安装版本以 `uv.lock` 为准。执行命令中的 `--locked` 用来避免运行时悄悄重写锁文件。
 
 - [返回仓库首页](../../README.md)
+- [第 2 篇：理解 State 与 Reducer](../ch02_state_reducers/README.md)
 - [常见问题](../../docs/troubleshooting.md)
 - [更新记录](../../docs/maintenance.md)
