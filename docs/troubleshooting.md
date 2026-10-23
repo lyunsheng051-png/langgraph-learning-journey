@@ -1,5 +1,13 @@
 # 常见问题
 
+## 第 4 篇：有次数限制，为什么还会触发 GraphRecursionError？
+
+`max_repairs` 是业务上的修正次数，`recursion_limit` 是单次图执行的 super-step 上限。初始化、检查、修正和结束都需要执行步骤。图上限设得过小，正常的有界流程也来不及结束。
+
+先确认路由包含通过和预算耗尽两种出口，再为正常路径设置足够上限。本章默认 32；`--recursion-limit 3` 是刻意触发中断的实验，退出码为 3。`recursion_limit` 放在调用配置顶层，不放入 `configurable`。
+
+`--max-repairs 1` 和 `--repair-mode unchanged` 走业务停止分支，退出码为 1，会保留草稿和问题列表。这里的无效修正是正常返回原文，不是节点异常自动重试。
+
 通用问题适用于前三篇，命令在对应章节目录执行；从仓库根目录运行时可通过 `--project` 指定章节。
 
 ## 提示找不到 chapter_demo
