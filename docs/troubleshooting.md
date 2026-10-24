@@ -1,5 +1,15 @@
 # 常见问题
 
+## 第 5 篇：填了 .env，为什么还提示缺少密钥？
+
+程序只读进程环境，不自动搜索 `.env`。在第五篇目录运行 `uv run --locked --env-file .env python -m chapter_demo --mode real`，由 uv 加载文件。`--env-file` 放在 uv 的参数位置，不放到 `chapter_demo` 后面。从章节外运行时，分别给出 `--project` 和 `--env-file` 的正确路径。
+
+默认运行是固定响应 mock，输出会明确标记。真实调用需要 `--mode real`；不会因为密钥缺失或请求失败而自动切回 mock。HTTP 401 应检查密钥，429 应检查额度或请求限制，400 应检查模型名称及参数支持。
+
+`key_points (missing)` 表示 JSON 缺少必需字段；`JSON (json_invalid)` 表示内容不是完整合法 JSON。JSON Output 约束 JSON 格式，字段仍由本地 Schema 校验。`finish_reason=length` 会被视为截断，即使文本恰好可解析也不接受。
+
+同一份 TXT 的 CRLF/LF 换行会在读取时统一为 LF，UTF-8 BOM 也会去除。mock 固定响应只适用于包内样例内容，不能用它判断自定义资料的摘要质量。
+
 ## 第 4 篇：有次数限制，为什么还会触发 GraphRecursionError？
 
 `max_repairs` 是业务上的修正次数，`recursion_limit` 是单次图执行的 super-step 上限。初始化、检查、修正和结束都需要执行步骤。图上限设得过小，正常的有界流程也来不及结束。

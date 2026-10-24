@@ -9,6 +9,8 @@
 
 前四篇从普通 Python 函数、状态更新、条件路由到有界循环入手，不需要模型密钥。
 
+第 5 篇接入 DeepSeek 生成文档摘要，提供真实调用与固定响应的故障实验；真实模式需要自己的模型凭据。
+
 从仓库根目录运行第 1 篇：
 
 ```powershell
@@ -36,6 +38,7 @@ uv run --locked python -m chapter_demo
 | 02 | LangGraph 学习之路：理解 State 与 Reducer | [运行指南](chapters/ch02_state_reducers/README.md) |
 | 03 | LangGraph 学习之路：用条件边选择下一步 | [运行指南](chapters/ch03_conditional_routing/README.md) |
 | 04 | LangGraph 学习之路：让工作流返工，也让它及时停下 | [运行指南](chapters/ch04_bounded_loops/README.md) |
+| 05 | LangGraph 学习之路：给文档摘要接上模型 | [运行指南](chapters/ch05_llm_summary/README.md) |
 
 各章节独立维护环境和锁文件，进入对应目录运行，不需要安装其他章节。
 
